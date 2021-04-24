@@ -34,7 +34,7 @@
 
         <header class="container-fluid fixed-top">
             <div class="row">
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="#">Pwdr</a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,45 +42,52 @@
                         </button>
                             <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
                                 <ul class="navbar-nav">
-                                <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown
-                                </a>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Products
+                                        </a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Programmes
+                                        </a>
+                                    </li>
+                                        
                                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                                     <li><a class="dropdown-item" href="#">Action</a></li>
                                     <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>  
                                 </ul>
                             </div>
                             <!-- CE code -->
                             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                            <form method="GET" action="">
-                                <div class="input-group w-100">
-                                    <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="search">
-                                    <div class="input-group-append">
-                                        <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                                            <span class="icon">
-                                                <i class="fas fa-search"></i>
-                                            </span>
-                                        </button>
-                                    </div>
-                                </div> 
-                            </form>    
+                                <form method="GET" action="">
+                                    <div class="input-group w-100">
+                                        <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="search">
+                                        <div class="input-group-append">
+                                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                                                <span class="icon">
+                                                    <i class="fas fa-search"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div> 
+                                </form>    
                             </div>  
+
                             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                                    <li class="list-inline-item-dropdown">
+                                    <li class="list-inline-item dropdown">
                                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <div class="text-center">
                                                 <div><i class="fas fa-user fa-lg"></i></div>
-                                                <p blass="my-0">My Account</p>
+                                                <p class="my-0">My Account</p>
                                             </div>
                                         </a>
                                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                                             {% if request.user.is_authenticated %}
                                                 {% if request.user.is_superuser %}
-                                                    <a href="" class="dropdown-item">Product Management</a>
+                                                <a href="" class="dropdown-item">Product Management</a>
                                                 {% endif %}
                                                 <a href="" class="dropdown-item">My Profile</a>
                                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
@@ -105,10 +112,7 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </div>
-                            <!-- end  -->
                     </div>
-                </nav>
             </div>
         </header>
 
