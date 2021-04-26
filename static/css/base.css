@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/PWDR-HERO-mockup-sm.png') no-repeat center center fixed;
+    background: url('/media/pwdr-hero-mockup-lg.jpeg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -60,6 +60,11 @@ body {
 .text-black {
     color: #000 !important;
 }
+
+.text-white {
+    color: white !important;
+}
+
 
 .border-black {
     border: 1px solid black !important;
