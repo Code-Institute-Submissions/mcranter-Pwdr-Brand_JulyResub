@@ -37,7 +37,7 @@
             <div class="row">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100 pt-lg-2 d-lg-flex">
                     <div class="container-fluid">
-                        <a class="navbar-brand" id="pwdr-" href="#">Pwdr</a>
+                        <a class="navbar-brand" id="pwdr-" href="#">Pwdr.</a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -80,7 +80,7 @@
                                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <div class="text-center">
                                                 <div><i class="fas fa-user fa-lg"></i></div>
-                                                <p class="my-0">My Account</p>
+                                                <p class="my-0 right-menu">My Account</p>
                                             </div>
                                         </a>
                                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -96,11 +96,12 @@
                                             {% endif %}
                                         </div>
                                     </li>
+                                    <!-- bag -->
                                     <li class="list-inline-item">
                                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
                                             <div class="text-center">
                                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                                <p class="my-0">
+                                                <p class="my-0 right-menu">
                                                     {% if grand_total %}
                                                         ${{ grand_total|floatformat:2 }}
                                                     {% else %}

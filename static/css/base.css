@@ -7,11 +7,16 @@ body {
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
-    font-family: 'Lato';
+    font-family: 'Source Code Pro';
 }
 
 #pwdr- {
     font-family: 'Source Code Pro', monospace;
+    font-size: 35px;
+}
+
+.right-menu {
+    color:white;
 }
 
 /* from Bulma */
