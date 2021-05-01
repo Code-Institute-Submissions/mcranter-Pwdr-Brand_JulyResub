@@ -5,20 +5,20 @@
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
             <div class="dropdown-menu border-0" aria-labelledby="products-link">
-                <a href="" class="dropdown-item">Powder</a>
-                <a href="" class="dropdown-item">Bars</a>
-                <a href="" class="dropdown-item">Merch</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+                <a href="{% url 'products' %}?category=powders" class="dropdown-item">Powder</a>
+                <a href="{% url 'products' %}?category=bars" class="dropdown-item">Bars</a>
+                <a href="{% url 'products' %}?category=merch" class="dropdown-item">Merch</a>
+                <a href="{% url 'products' %}?category=powders,bars,merch" class="dropdown-item">All Products</a>
             </div>
         </li>
         <!-- programme dropdown -->
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="programmes-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Programmes</a>
             <div class="dropdown-menu border-0" aria-labelledby="programmes-link">
-                <a href="" class="dropdown-item">Couch to 5k</a>
-                <a href="" class="dropdown-item">Vegan Vigour</a>
-                <a href="" class="dropdown-item">Pwdr Workout Club</a>
-                <a href="{% url 'programmes' %}" class="dropdown-item">All Programmes</a>
+                <a href="{% url 'programmes' %}?category=couch-to-5k" class="dropdown-item">Couch to 5k</a>
+                <a href="{% url 'programmes' %}?category=vegan-vigour" class="dropdown-item">Vegan Vigour</a>
+                <a href="{% url 'programmes' %}?category=workout-club" class="dropdown-item">Pwdr Workout Club</a>
+                <a href="{% url 'programmes' %}?category=couch-to-5k,vegan-vigour,workout-club" class="dropdown-item">All Programmes</a>
             </div>
         </li>
         <!-- search dropdown -->
