@@ -84,9 +84,13 @@ body {
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-  .container {
+    .container {
     max-width: 80%;
-  }
+    }
+/* my customisation */
+    .offset-lg-2 {
+        margin-left: 0;
+    }
 }
 
 /* fixed top navbar only on medium and up */
