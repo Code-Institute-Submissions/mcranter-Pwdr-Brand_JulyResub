@@ -5,14 +5,33 @@ from .models import Programme, Category
 
 # Create your views here.
 
+
 def all_programmes(request):
     """ A view to show all programmes, including sorting and search queries """
 
     programmes = Programme.objects.all()
     query = None
     categories = None
+    sort = None
+    direction = None
 
     if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower name'
+                programmes = programmes.annotate(lower_name=Lower('name'))
+                if sortkey == 'category':
+                    sortkey = 'category_name'
+            programmes = programmes.order_by(sortkey)
+
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            programmes = programmes.order_by(sortkey)
+
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             programmes = programmes.filter(category__name__in=categories)
@@ -23,14 +42,17 @@ def all_programmes(request):
             if not query:
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('programmes'))
-            
+
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             programmes = programmes.filter(queries)
+
+    current_sorting = f'(sort)_(direction)'
 
     context = {
         'programmes': programmes,
         'search_term': query,
         'current_categories': categories,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'programmes/programmes.html', context)
