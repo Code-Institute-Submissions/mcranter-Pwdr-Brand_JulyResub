@@ -99,6 +99,10 @@ a.category-badge > span.badge:hover {
     color: #fff !important;
 }
 
+.quantity {
+    justify-content: center;
+}
+
 
 /* -------------------------------- Media Queries */
 
