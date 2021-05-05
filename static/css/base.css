@@ -103,6 +103,11 @@ a.category-badge > span.badge:hover {
     justify-content: center;
 }
 
+.qty_input1 {
+    align-content: center ;
+}
+
+
 
 /* -------------------------------- Media Queries */
 
