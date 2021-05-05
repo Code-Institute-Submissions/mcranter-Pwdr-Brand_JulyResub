@@ -107,7 +107,10 @@ a.category-badge > span.badge:hover {
     align-content: center ;
 }
 
-
+.btt-link,
+.update-item {
+    cursor: pointer;
+}
 
 /* -------------------------------- Media Queries */
 
