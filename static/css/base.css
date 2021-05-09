@@ -108,8 +108,16 @@ a.category-badge > span.badge:hover {
 }
 
 .btt-link,
-.update-item {
+.update-item,
+.remove-item {
     cursor: pointer;
+}
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
 }
 
 /* -------------------------------- Media Queries */
