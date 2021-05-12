@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 from django.conf import settings
+import stripe
+
 
 from bag.contexts import bag_contents
 from .forms import OrderForm
-
-import stripe
 
 
 # Create your views here.
@@ -34,8 +34,8 @@ def checkout(request):
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
-        'stripe_public_key': stripe_public_key,
-        'client_secret': intent.client_secret,
+        'stripe_public_key': 'pk_test_0SMREd7Vdweb1MGRi8S0EycR00JVzSAs5O',
+        'client_secret': 'test client secret',
     }
 
     return render(request, template, context)
