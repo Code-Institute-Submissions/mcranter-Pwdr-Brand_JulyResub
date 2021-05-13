@@ -66,7 +66,6 @@ form.addEventListener('submit', function(ev) {
             card.update({ 'disabled': false});
             $('#submit-button').attr('disabled', false);
         } else {
-            //the payment has been processed
             if (result.paymentIntent.status === 'succeeded') {
                 form.submit();
             }
