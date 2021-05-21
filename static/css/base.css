@@ -168,11 +168,6 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
-.bag-notification-wrapper {
-    height: 100px;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
 
 /* ------------------------------- bootstrap toasts */
 
@@ -218,6 +213,7 @@ input[name='q']::placeholder {
     border-color: #dc3545;
     border-radius: 0;
 }
+
 
 /* -------------------------------- Media Queries */
 
