@@ -1,0 +1,175 @@
+ {% load static %}
+<!-- Based on starter template from Bootstrap: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+<!doctype html>
+<html lang="en">
+    <head>
+        {% block meta %}
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% endblock %}
+
+        {% block corecss %}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro:ital,wght@1,200&display=swap">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="{% static 'css/404.css' %}">    
+        {% endblock %}
+
+        {% block extra_css %}
+        {% endblock %}
+
+        {% block corejs %}
+        <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        {% endblock %}
+        <title>Pwdr {% block extra_title %}{% endblock %}</title>
+    </head>
+    <body>
+        <header class="container-fluid fixed-top">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100 pt-lg-2 d-lg-flex">
+                    <a class="navbar-brand" id="pwdr-" href="{% url 'home' %}">Pwdr.</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">                        
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    {% include 'includes/main-nav.html' %}                       
+                </nav>    
+            </div>           
+        </header>
+
+        <!--- code from  https://freefrontend.com/html-funny-404-pages/ -->
+        <div class="container">
+            <div class="ag-page-404">
+            <div class="ag-toaster-wrap">
+                <div class="ag-toaster">
+                <div class="ag-toaster_back"></div>
+                <div class="ag-toaster_front">
+                    <div class="js-toaster_lever ag-toaster_lever"></div>
+                </div>
+                <div class="ag-toaster_toast-handler">
+                    <div class="ag-toaster_shadow"></div>
+                    <div class="js-toaster_toast ag-toaster_toast js-ag-hide"></div>
+                </div>
+                </div>
+                <canvas id="canvas-404" class="ag-canvas-404"></canvas>
+                <img class="ag-canvas-404_img" src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/404-error-smoke-from-toaster/images/smoke.png">
+            </div>
+            <h4 class="logo-font my-1 text-center">Ooops! Something went wrong</h4>
+                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Back</span>
+                </a>                    
+            </div>     
+        </div>    
+   </body>
+</html>    
+
+
+
+{% block postloadjs %}
+<script type="text/javascript">
+(function ($) {
+  $(function () {
+
+$().ready(function () {
+    (function () {
+      var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+      window.requestAnimationFrame = requestAnimationFrame
+    })();
+    var canvas = document.getElementById('canvas-404');
+    if (canvas === null)return;
+    setTimeout(function () {
+      $('.js-toaster_lever').delay(200).animate({top: 30}, 100);
+      $('.js-toaster_toast').removeClass('js-ag-hide').addClass('js-ag-animated js-ag-bounce-in-up')
+    }, 800);
+    var ctx = canvas.getContext("2d"),
+      loading = true;
+
+    canvas.height = 210;
+    canvas.width = 300;
+
+    var parts = [],
+      minSpawnTime = 100,
+      lastTime = new Date().getTime(),
+      maxLifeTime = Math.min(6000, (canvas.height / (1.5 * 60) * 1000)),
+      emitterX = canvas.width / 2 - 50,
+      emitterY = canvas.height - 10,
+      smokeImage = new Image();
+
+    function spawn() {
+      if (new Date().getTime() > lastTime + minSpawnTime) {
+        lastTime = new Date().getTime();
+        parts.push(new smoke(emitterX, emitterY))
+      }
+    }
+    function render() {
+      if (loading) {
+        load();
+        return false
+      }
+      var len = parts.length;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      while (len--)if (parts[len].y < 0 || parts[len].lifeTime > maxLifeTime) {
+        parts.splice(len, 1)
+      } else {
+        parts[len].update();
+        ctx.save();
+        var offsetX = -parts[len].size / 2, offsetY = -parts[len].size / 2;
+        ctx.translate(parts[len].x - offsetX, parts[len].y - offsetY);
+        ctx.rotate(parts[len].angle / 180 * Math.PI);
+        ctx.globalAlpha = parts[len].alpha;
+        ctx.drawImage(smokeImage, offsetX, offsetY, parts[len].size, parts[len].size);
+        ctx.restore()
+      }
+      spawn();
+      requestAnimationFrame(render)
+    }
+    function smoke(x, y, index) {
+      this.x = x;
+      this.y = y;
+      this.size = 1;
+      this.startSize = 60;
+      this.endSize = 69;
+      this.angle = Math.random() * 359;
+      this.startLife = new Date().getTime();
+      this.lifeTime = 0;
+      this.velY = -1 - (Math.random() * 0.5);
+      this.velX = Math.floor(Math.random() * (-6) + 3) / 10
+    }
+    smoke.prototype.update = function () {
+      this.lifeTime = new Date().getTime() - this.startLife;
+      this.angle += 0.2;
+      var lifePerc = ((this.lifeTime / maxLifeTime) * 100);
+      this.size = this.startSize + ((this.endSize - this.startSize) * lifePerc * .1);
+      this.alpha = 1 - (lifePerc * .01);
+      this.alpha = Math.max(this.alpha, 0);
+      this.x += this.velX;
+      this.y += this.velY
+    }
+    smokeImage.src = document.getElementsByTagName('img')[0].src;
+    smokeImage.onload = function () {
+      loading = false
+    };
+    function load() {
+      if (loading) {
+        setTimeout(load, 3000);
+      } else {
+        render();
+      }
+    }
+
+    render();
+});
+
+  });
+})(jQuery);
+</script>
+
+{% endblock %}
+
