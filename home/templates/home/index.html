@@ -1,67 +1,100 @@
+{% extends "base.html" %}
 {% load static %}
-<!-- Based on starter template from Bootstrap: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
-<!doctype html>
-<html lang="en">
-    <head>
-        {% block meta %}
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        {% endblock %}
 
-        {% block corecss %}
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro:ital,wght@1,200&display=swap">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="stylesheet" href="{% static 'css/base.css' %}">    
-        {% endblock %}
-
-        {% block extra_css %}
-        {% endblock %}
-
-        {% block corejs %}
-        <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        {% endblock %}
-
-        {% block extra_js %}
-        {% endblock %}
-
-        <title>Pwdr {% block extra_title %}{% endblock %}</title>
-    </head>
-    <body>
-        <header class="container-fluid fixed-top">
-            <div class="row">
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100 pt-lg-2 d-lg-flex">
-                    <a class="navbar-brand" id="pwdr-" href="{% url 'home' %}">Pwdr.</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">                        
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    
-                    {% include 'includes/main-nav.html' %}                       
-                </nav>    
-            </div>
-            <div id="delivery-banner" class="row text-center">
-            <div class="col bg-black text-white">
-                <h4 class="logo-font my-1">Free delivery on orders over €{{ free_delivery_threshold }}!</h4>                
-            </div>            
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
         </div>
-        </header>
+    </div>
+{% endblock %}
 
-        {% if messages %}
-            <div class="message-container"></div>
-        {% endif %}
 
-        {% block page_header %}
-        {% endblock %}
+{% block content %}        
+    <div class="container h-100">
+        <div class="row top">
+            <div class="col-10 md-6 sm-2"> 
+                <h1 class="pwdr-is">Pwdr is
+                    <span
+                        class="txt-rotate"
+                        data-period="2000"
+                        data-rotate='[ "bars.", "workout.", "vegan.", "energy.", "powder." ]'></span>
+                </h1>        
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10 md-6 sm-2 index-shop"> 
+                <h2 class="index-shop">
+                    <a href="{% url 'products' %}" class="btn-lg btn-black rounded-0 text-white text-uppercase">Shop Now</a>
+                </h2>  
+            </div>
+        </div>
+    </div>
+{% endblock %}
 
-        {% block content %}
-        {% endblock %}
+{% if messages %}
+    <div class="message-container"></div>
+{% endif %}
 
-        {% block postloadjs %}
-        {% endblock %}
+{% block postloadjs %}
+<script type="text/javascript">
+    var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // Inject CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+  document.body.appendChild(css);
+};
+</script>
+{% endblock %}
         
-    </body>
-</html>
+ 

@@ -8,8 +8,8 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
-stripe.api_key = ('sk_test_51Igp6uAkbdkgFtr8YdD643EUTFkUi3Ymro0V0CTk\
-    sVd6TpsOvIvw3OBebKXf1tHVschXc8FAf2IIZ5gaHysywLHoO000FwtKEPc')
+stripe.api_key = ('pk_test_51Igp6uAkbdkgFtr8wO7oDdioKa5VwcgRhgUm5bQo47\
+                  wjY7aF4LDfs27cwvbrjRRIZAHJjyAU7smE6f8LYmN74fkD00yB5CzGPp')
 
 
 @app.route('/create-checkout-session', methods=['POST'])
@@ -24,7 +24,8 @@ def create_checkout_session():
         # query parameter when your customer
         # is redirected to the success page.
         checkout_session = stripe.checkout.Session.create(
-            success_url='https://example.com/success.html?session_id={CHECKOUT_SESSION_ID}',
+            success_url=(
+                         'https://example.com/success.html?session_id={CHECKOUT_SESSION_ID}'),
             cancel_url='https://example.com/canceled.html',
             payment_method_types=['card'],
             mode='subscription',
@@ -52,7 +53,7 @@ def webhook_received():
         signature = request.headers.get('stripe-signature')
         try:
             event = stripe.Webhook.construct_event(
-                payload=request.data, 
+                payload=request.data,
                 sig_header=signature, secret=webhook_secret)
             data = event['data']
         except Exception as e:
