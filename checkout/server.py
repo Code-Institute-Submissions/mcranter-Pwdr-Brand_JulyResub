@@ -8,8 +8,8 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
-stripe.api_key = ('sk_test_51Igp6uAkbdkgFtr8YdD643EUTFkUi3Ymro0V0CTk\
-                  sVd6TpsOvIvw3OBebKXf1tHVschXc8FAf2IIZ5gaHysywLHoO000FwtKEPc')
+stripe.api_key = ('pk_test_51Igp6uAkbdkgFtr8wO7oDdioKa5VwcgRhgUm5bQo47wjY7aF4\
+                  LDfs27cwvbrjRRIZAHJjyAU7smE6f8LYmN74fkD00yB5CzGPp')
 
 
 @app.route('/create-checkout-session', methods=['POST'])
