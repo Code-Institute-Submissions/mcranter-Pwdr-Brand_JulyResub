@@ -27,6 +27,7 @@ class OrderForm(forms.ModelForm):
             'county': 'County, State or Province',
         }
 
+        self.fields['phone_number'].widget.attrs['pattern'] = "[0-9]{1,15}"
         self.fields['full_name'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if field != 'country':
