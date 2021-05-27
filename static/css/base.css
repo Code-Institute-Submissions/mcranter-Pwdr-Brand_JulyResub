@@ -215,6 +215,7 @@ input[name='q']::placeholder {
 }
 
 /* index page animation styling */
+
 .top {
     padding-top: 150px;
     padding-left: 100px;
@@ -222,7 +223,7 @@ input[name='q']::placeholder {
 
 .pwdr-is {
     background-color: white;
-    padding-left: 150px;
+    /* padding-left: 150px; */
 }
 
 .index-shop {
@@ -238,6 +239,17 @@ input[name='q']::placeholder {
 .index-shop {
     color: #888;
     font-size: 2em;
+}
+
+#footer {
+   left:0px;
+   bottom:0px;
+   z-index:1;
+   width:100%;
+}
+
+.contact {
+    padding-bottom: 150px;
 }
 
 /* INDEX-SHOP TO BE FIXED WITH MEDIA QUERIES FOR SMALLER DEVICES */

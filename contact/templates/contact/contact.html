@@ -2,17 +2,20 @@
 
 {% block content %} 
 <!--Contact form-->
-	<div style="margin:80px">
-		<h1>Contact</h1>
-		<h4>Contact us directly if you have any questions</h4>
-		<p>
-			Please write your name, email address and a message below if you have any questions.
-			One of our staff members will be happy to contact you directly and answer your questions as soon as possible. 
-		</p>
-		<form method="post">
-        {% csrf_token %}
-            {{form.as_p}}
-            <button type="submit">Submit</button>
-        </form>
+    <div class="container">
+        <div class="row">
+            <div class="col-10 md-6 contact"> 
+                <h1>Contact</h1>
+                <h4>Get in touch!</h4>
+                    <p>
+                        We LOVE hearing from you. Please get in touch with any comments or questions and we'll be sure to answer!
+                    </p>
+                <form method="post">
+                {% csrf_token %}
+                    {{form.as_p}}
+                    <button type="submit" class="btn btn-outline-black rounded-0 mt-5">Submit</button>
+                </form>
+            </div>
+        </div>
     </div>
 {% endblock %}
