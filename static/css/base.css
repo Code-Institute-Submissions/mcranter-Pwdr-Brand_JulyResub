@@ -227,7 +227,7 @@ input[name='q']::placeholder {
 }
 
 .index-shop {
-    padding-left: 225px;
+    padding-left: 400px;
 }
 
 .pwdr-is, .index-shop {
@@ -246,7 +246,10 @@ input[name='q']::placeholder {
    bottom:0px;
    z-index:1;
    width:100%;
+   overflow-x: hidden;
 }
+
+/* contact page  */
 
 .contact {
     padding-bottom: 20px;
@@ -255,6 +258,13 @@ input[name='q']::placeholder {
 
 .card-bg {
     background-color: #c0f1d5;
+}
+/* form elements */
+#id_first_name 
+#id_last_name,
+#id_email_address, 
+#id_message {
+    max-width: 175px;
 }
 
 
