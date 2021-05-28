@@ -249,8 +249,19 @@ input[name='q']::placeholder {
 }
 
 .contact {
-    padding-bottom: 150px;
+    padding-bottom: 20px;
+    margin-top: 200px;
 }
+
+.card-bg {
+    background-color: #c0f1d5;
+}
+
+
+.submit {
+    margin-bottom: 100px;
+}
+
 
 /* INDEX-SHOP TO BE FIXED WITH MEDIA QUERIES FOR SMALLER DEVICES */
 

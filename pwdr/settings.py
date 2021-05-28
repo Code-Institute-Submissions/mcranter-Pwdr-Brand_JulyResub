@@ -57,7 +57,9 @@ INSTALLED_APPS = [
     'crispy_forms',
     'storages',
     'embed_video',
+    'widget_tweaks',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

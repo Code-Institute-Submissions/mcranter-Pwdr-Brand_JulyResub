@@ -2,18 +2,15 @@
 
 {% block content %} 
 <!--Contact form-->
-    <div class="container">
-        <div class="row">
-            <div class="col-10 md-6 contact"> 
-                <h1>Contact</h1>
-                <h4>Get in touch!</h4>
-                    <p>
-                        We LOVE hearing from you. Please get in touch with any comments or questions and we'll be sure to answer!
-                    </p>
+    <div class="container d-flex justify-content-center text-center contact">
+        <div class="card px-5 py-5 card-bg">
+            <div class="card px-5 py-5 mt-3 card-inner">
+                <h1>Contact Us</h1> <span>Got questions? Then get in touch we'll respond as soon as possible</span>
+                   
                 <form method="post">
                 {% csrf_token %}
                     {{form.as_p}}
-                    <button type="submit" class="btn btn-outline-black rounded-0 mt-5">Submit</button>
+                    <button type="submit" class="btn btn-black rounded-1 mt-3 mb-2">Submit</button>
                 </form>
             </div>
         </div>
