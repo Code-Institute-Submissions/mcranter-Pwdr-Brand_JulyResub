@@ -223,12 +223,13 @@ input[name='q']::placeholder {
 
 .pwdr-is {
     background-color: white;
-    /* padding-left: 150px; */
+    border-radius: 5%;
 }
 
 .index-shop {
     padding-left: 400px;
 }
+
 
 .pwdr-is, .index-shop {
     font-weight: 300;
@@ -264,7 +265,8 @@ input[name='q']::placeholder {
 #id_last_name,
 #id_email_address, 
 #id_message {
-    max-width: 175px;
+    border-radius: 5%;
+    width: fit-content;
 }
 
 
@@ -458,6 +460,63 @@ input[name='q']::placeholder {
         padding: .25rem .5rem !important;
     }
 }
+
+
+/* responsive devices */
+@media (max-width: 770px) {
+    .index-shop {
+        padding-left: 200px;
+    }
+
+    #id_message {
+        width: 246px;
+    }
+}
+
+@media (max-width: 500px) {
+    .index-shop {
+        padding-left: 190px;
+    }
+}
+
+@media (max-width: 460px) and (min-width: 430px) {
+    .index-shop {
+        padding-left: 150px;
+    }
+
+    .pwdr-is {
+        font-size: 40px;
+    }
+}
+
+/* Pixel2 */
+@media (max-width: 429px) and (min-width: 408px) {
+    #id_message {
+        width: 220px;
+    }
+}
+
+
+@media (max-width: 375px) and (min-width: 360px) {
+    .index-shop {
+        padding-left: 120px;
+    }
+
+    .contactus {
+        font-size: 30px;
+    }
+
+    #id_first_name, #id_last_name,
+    #id_email_address, #id_message {
+        width: 135px;
+    }
+
+    .top {
+        padding-left: 60px;
+    }
+
+}
+
 /* iphone 5 SE */
 @media (max-width: 320px) {
 
@@ -477,5 +536,19 @@ input[name='q']::placeholder {
         padding-left: 45px;
         margin-bottom: 50px;
     }
+
+    .card-inner {
+        padding:0px !important;
+    }
+
+    #id_first_name, #id_last_name,
+    #id_email_address, #id_message {
+        width: 190px;
+    }
+
+    .card-bg {
+        margin-bottom: 75px;
+    }
+
 
 }
