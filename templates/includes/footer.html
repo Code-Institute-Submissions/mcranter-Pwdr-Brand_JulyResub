@@ -7,21 +7,20 @@
             <!--Grid row-->
             <div class="row text-center">
                 <!--Grid column-->
-                <div class="col-auto mb-md-0">
+                <div class="col-auto mb-md-0 sign">
                     <p>
                         <strong>Sign up for our newsletter</strong>
                     </p>
-                    <a href="{% url 'contact' %}" class="btn btn-outline-light">Contact</a>
                 </div>
                 <!--Grid column-->
                 <div class="col-md-5 col-12">
                     <!-- Email input -->
                     <div class="form-outline">
-                        <input type="email" id="form-e" placeholder = "email address" class="form-control"/>            
+                        <input type="email" action="post" id="form-e" placeholder = "email address" class="form-control"/>            
                     </div>
                 </div>
                 <!--Grid column-->
-                <div class="col-sm-1">
+                <div class="col-sm-1 mt-2">
                     <!-- Submit button -->
                     <button type="submit" class="btn btn-outline-light">
                     Subscribe
@@ -29,6 +28,17 @@
                 </div>
             </div>
             <!--Grid row-->
+            <div class="row">
+                <div class="col-lg-4 col-sm-12 footer-links">
+                    <a href="{% url 'contact' %}" class="footer-links">Contact</a>
+                </div>
+                <div class="col-lg-4 col-sm-12 footer-links">
+                    <a href="{% url 'faqs' %}" class="footer-links">FAQs</a>
+                </div>
+                <div class="col-lg-4 col-sm-12 footer-links">
+                    <a href="{% url 'about' %}" class="footer-links">About Pwdr</a>
+                </div>
+            </div>
         </form>
         <div class="container">
             <!-- Section: Social media -->

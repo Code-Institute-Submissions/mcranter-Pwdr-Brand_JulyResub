@@ -250,6 +250,12 @@ input[name='q']::placeholder {
    overflow-x: hidden;
 }
 
+.footer-links {
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
 /* contact page  */
 
 .contact {
@@ -274,8 +280,61 @@ input[name='q']::placeholder {
     margin-bottom: 100px;
 }
 
+/* faq page */
+.card-faq {
+    margin-bottom: 100px;
+    margin-top: 50px;
+    background-color: white;
+    padding: 15px;
+}
 
-/* INDEX-SHOP TO BE FIXED WITH MEDIA QUERIES FOR SMALLER DEVICES */
+/* about us */
+.imageman {
+    width:1000px;
+    height: 700px;
+    margin-top:150px;
+    border-radius: 5%;
+    margin-bottom:20px;
+}
+
+
+.benefits {
+    width:970px;
+    height: 400px;
+    margin-bottom: 100px;
+    border-radius: 5%;
+    padding-left: 15px;
+}
+
+
+.card-about2 {
+    margin-right: 75px;
+    padding-top:15px;
+    background: white;
+    margin-bottom: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top:60px;
+    padding-bottom:15px;
+    border-radius:3%;
+    margin-left:30px;
+    text-align: center;
+}
+
+.card-about3 {
+    margin-right: 75px;
+    padding-top:15px;
+    background: white;
+    margin-bottom: 100px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top:60px;
+    padding-bottom:15px;
+    border-radius:3%;
+    margin-left:30px;
+    text-align: center;
+}
+
 
 /* -------------------------------- Media Queries */
 
@@ -463,19 +522,92 @@ input[name='q']::placeholder {
 
 
 /* responsive devices */
-@media (max-width: 770px) {
+@media (max-width: 1024px) {
+    .imageman {
+        width:900px;
+        height: 700px;
+        margin-top:150px;
+        border-radius: 5%;
+        margin-bottom:20px;
+    }
+
+
+    .benefits {
+        width:900px;
+        height: 400px;
+        margin-bottom: 100px;
+        border-radius: 5%;
+        padding-left: 15px;
+    }
+
+    .card-about2 {
+        margin-left:0 ;
+        } 
+
+    .card-about3 {
+        margin-left:0 ;
+        }
+}
+
+@media (max-width: 990px) and (min-width: px) {
     .index-shop {
-        padding-left: 200px;
+        padding-left: 275px;
+    }
+}
+
+
+/* ipad */
+@media (max-width: 770px) and (min-width: 760px) {
+    .index-shop {
+        padding-left: 275px;
     }
 
     #id_message {
         width: 246px;
     }
+    
+    .imageman {
+        width:700px;
+    }
+
+    .benefits {
+        width: 700px;
+    }
+}
+@media (max-width: 990px) and (min-width: 766px) {
+    .index-shop {
+        padding-left: 290px;
+    }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 764px) and (min-width: 521px) {
+    .index-shop {
+        padding-left: 200px;
+    }
+
+    #id_message {
+        width: 230px;
+    }
+}
+
+
+@media (max-width: 520px)  {
     .index-shop {
         padding-left: 190px;
+    }
+
+    .benefits {
+        width: 500px;
+        height: 250px;
+    }
+
+    .imageman {
+        width: 500px;
+        height: 250px;
+    }
+
+    #id_message {
+        width: 190px;
     }
 }
 
@@ -490,9 +622,34 @@ input[name='q']::placeholder {
 }
 
 /* Pixel2 */
-@media (max-width: 429px) and (min-width: 408px) {
+@media (max-width: 429px) and (min-width: 375px) {
     #id_message {
         width: 220px;
+    }
+    .benefits {
+        width: 375px;
+        height: 200px;
+    }
+
+    .imageman {
+        width: 375px;
+        height: 200px;
+    }
+   
+    .pwdr-is {
+        font-size: 3em;
+    }
+
+    .index-shop {
+        padding-left: 90px;
+    }
+
+    .sign {
+        padding-left: 75px;
+    }
+
+    .top {
+        padding-left:50px;
     }
 }
 
@@ -515,6 +672,43 @@ input[name='q']::placeholder {
         padding-left: 60px;
     }
 
+    .benefits {
+        width: 340px;
+        height: 200px;
+    }
+
+    .imageman {
+        width: 320px;
+        height: 200px;
+    }
+
+    .pwdr-is {
+        font-size: 2.5em;
+        padding-left: 5px;
+    }
+
+    .index-shop {
+        padding-left: 100px;
+    }
+
+    .sign {
+        padding-left: 50px;
+    }
+
+}
+
+@media (max-width: 359px) and (min-width: 319px) {
+    .index-shop {
+        padding-left: 85px;
+    }
+
+    .pwdr-is {
+        font-size: 3em;
+    }
+
+    .top {
+        padding-left: 50px;
+    }
 }
 
 /* iphone 5 SE */
@@ -552,3 +746,4 @@ input[name='q']::placeholder {
 
 
 }
+
