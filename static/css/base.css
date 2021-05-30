@@ -557,6 +557,14 @@ input[name='q']::placeholder {
 
 
 /* ipad */
+
+
+@media (max-width: 990px) and (min-width: 766px) {
+    .index-shop {
+        padding-left: 290px;
+    }
+}
+
 @media (max-width: 770px) and (min-width: 760px) {
     .index-shop {
         padding-left: 275px;
@@ -574,11 +582,6 @@ input[name='q']::placeholder {
         width: 700px;
     }
 }
-@media (max-width: 990px) and (min-width: 766px) {
-    .index-shop {
-        padding-left: 290px;
-    }
-}
 
 @media (max-width: 764px) and (min-width: 521px) {
     .index-shop {
@@ -590,7 +593,23 @@ input[name='q']::placeholder {
     }
 }
 
+/* surface duo */
+@media (max-width: 540px) {
+    .imageman {
+        width: 500px;
+        height:320px;
 
+    }
+
+    .benefits {
+        width: 500px;
+        height:320px;
+        padding:0px;
+    }
+
+}
+
+}
 @media (max-width: 520px)  {
     .index-shop {
         padding-left: 190px;
@@ -744,6 +763,20 @@ input[name='q']::placeholder {
         margin-bottom: 75px;
     }
 
+    .imageman {
+        width: 300px;
+        height:200px;
+        padding-left:0px;
+    }
+
+    .benefits {
+        width: 300px;
+        height:200px;
+    }
+
+    .sign {
+        margin-left:15px;
+    }
 
 }
 
