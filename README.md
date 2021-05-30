@@ -1,45 +1,221 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Pwdr.
 
-Welcome mcranter,
+## Deployment
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+### Existing features 
 
-## Gitpod Reminders
+#### 1. Navbar
+- Logo is clearly visible in the left of the navbar. The name redirects to the home page. 
+- The navbar contains the **search functionality**, where the user can search for products using full or partial words. 
+    - The search functionality allows users to enter keywords associated with the name or the description of the product. 
+    - The search results are displayed on the products page. 
+    - On the product page, a message will appear with ‘no results’ if there are no search results.
+- The navbar contains the **profile icon**, where users can login, register and go to their profile.
+- The navbar contains the **shopping bag**, where users can see their cart. The basket redirects to the bag page. 
+- There is a section with a **products** dropdown listing the products that are in store. 
+- There is a section with a **programmes** dropdown listing the programmes that are in store. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+#### 2. Footer
+- **Relevant links**  FAQs, About Us and Contact are placed at the bottom of the footer.
+- The **social media links** are placed at the bottom of the footer. 
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+#### 3. Home page 
+- The home page serves as an stylised introduction to the webstore's 'brand'.
+- An image of two pwdr products serves as background image
+- There is a 'shop now' button leading to all products.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+#### 4. Product page 
+- The All Product page contains all products.
+- There are 3 Product **categories** displayed on the All Products page: Powders, Bars and Merch.
+- The items can be **sorted** by name A-Z, Z-A, price from high to low and price from low to high
 
-A blue button should appear to click: _Make Public_,
+#### 5. Programme page 
+- The All Programmes page contains all programmes.
+- There are 3 Programme **categories** displayed on the All Programmes page: Couch to 5k, Vegan Vigour, Pwdr Workout Club.
+- The items can be **sorted** by name A-Z, Z-A, price from high to low and price from low to high
 
-Another blue button should appear to click: _Open Browser_.
+#### 6. Product detail page 
+- **The product detail page shows information about that specific item**, the information includes; name, image, price and the product description. 
+- A user can **choose the quantity** of the product. The product quantity can be between 1 and 99 items. 
+- A user can **see the size** of the product, if applicable. 
+- There is a button where the user can **add the product/programme to the shopping bag**.
+    - When the user  puts the item in the bag there will be a toast success message.
+    - When the user puts the item in the bag, the shopping bag in the navbar will show the number of items that are in the shopping bag.
+- There is a **‘Back’** link that redirects to the Products page. 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+#### 7. The shopping page
+- Logged in Users and non-logged in users can make purchases.
+- Gives **an overview of all items** that are in the shopping bag, the overview information includes; image, name, size, quantity, price and subtotal.
+- users can **update the quantity** of the items they have.
+- users can **remove items** from their order.
+- There's an **overview of the total price, the delivery costs and the grant total** of the order.
+- There's a button with **‘keep shopping’** that links to the product page. 
+- There's a button with **‘go to checkout’** to continue the purchase.
 
-## Updates Since The Instructional Video
+#### 8. Checkout page 
+- The **order summary** gives information about the item, including: name, size, price, total, delivery costs and grand total. 
+- There is an option to **login with an account**, where the personal and delivery information already exists to continue the payment process quickly. 
+- **The checkout form** to continue the payment. The form asks for the following information: full name, email, phone number, country, postal code, town or city and  street address 1 - all these input fields must be valid. The country field is an input where users can scroll to a list to choose the country.
+- At the end of the checkout form there is an option to **save** the delivery information to an account. This function only shows when the user is authenticated.
+- The user has to fill in their information about the card number. The Stripe functionality is in testing mode, the credit card number **4242 4242 4242 4242** will lead to a successful payment. expiration date, CVC and ZIP can be made up yourself.
+- A **webhook** is used for security when the order is processed, even in the case when the payment process is interrupted.
+- There is a **button to go back to the shopping bag page.** The user can go back to the shopping bag page to adjust items in the bag.
+- There is a button to **complete the order**.
+- When the user clicks on the complete the order button, there is a little **loading overlay**. The user is directed to the checkout success page after the overlay. 
+- **When the order is completed:**
+    - There is a redirect to the checkout success page.
+    - A confirmation email is sent to the user’s mail.
+    - A toast message ‘completed’ shows to ensure the user that the order is successfully completed.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+#### 9. Checkout success page
+- Contains a **confirmation message**.
+- Includes information about the **order summary**. The order summary consists of information about the date, order number, products, delivery information and billing information. 
+- There is a button to go back to the product page.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+#### 10. The profile page 
+- The account page is only accessible for users who have an account. 
+- The page contains a **personal info section** (username, email). The user can change the password and edit their email. 
+- There is a shipping **info section** (country, postal code, town/city, street address 1 and street address 2. Users can **edit this information** also. 
+- There is an **order history** section (order number, date of order, items and total) 
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+#### 11. FAQ page 
+- This page contains all relevant questions (text generated from a FAQ text generator).
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+#### 12. Contact page 
+- Users can reach out to Pwdr via the **contact form**. The user has to fill in their name, email and message. The form will be sent to the admin. 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+#### 14. Django-Allauth features 
+- **Sign up**
+    - Users can create a new account by filling in a from where the user have to fillin a email, username, password and password confirmation. If the info already exists there will be a message that he/she already has an account. The user can submit the form when the data is new. A verification email is sent to the user.
+- **Login**
+    - Users can login with their username ans password. There is also a link to change the password, if the user is forgotten it. 
+- **Forgot password**
+    - A user can reset their password. 
+- **Logout** 
+    - The user can logout by clicking the logout link. After clicking the link there wil a confirmation if the user is sure to logout. 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+#### 15. Error pages 
+- There are custom error handling pages on this site. The errors are displayed in the style of the website. 
+- The following errors are included: 404 and 500.
 
 ---
 
-Happy coding!
+<h1>6. Deployment</h1>
+
+#### Requirements for Deployment:
+- Python3 
+- Github
+- Gitpod or other IDE  
+- Heroku  
+- Stripe account
+- AWS Amazon account
+- Gmail account
+
+#### Clone the project 
+To make a local clone, follow the following steps. 
+1. Log in to GitHub and go to the repository. 
+2. Click on the green button with the text **“Code”.**
+3. Click on **“Open with GitHub Desktop”** and follow the prompts in the GitHub Desktop Application or follow the instructions from **[this link](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop)** to see how to clone the repository in other ways. 
+
+#### Working with the local copy
+1. Install all the requirements: Go to the workspace of your local copy. In the terminal window of your IDE type: **pip3 install -r requirements.txt**.
+2. Set up the environment variables: 
+    - Create a `.gitignore` file in the root directory of the project. 
+    - Create a `.env` file. This will contain the following environment variables:
+
+    ```
+    Import os
+    os.environ("SECRET_KEY", "Added by user")
+    os.environ("STRIPE_PUBLIC_KEY", "Added by user")
+    os.environ("STRIPE_SECRET_KEY", "Added by user")
+    os.environ("STRIPE_WH_SECRET", "Added by user")
+    ```
+    - Add the `.env` file to the `.gitignore` file.
+    **NOTE:** See more in the [Stripe Documentation](https://stripe.com/docs/keys) to read more about setting the API key.
+3. Migrate the models to create the database by the following commands:
+    - `python3 manage.py makemigrations`
+    - `python3 manage.py migrate`
+4. Load the data fixtures for categories and product in this exact order:
+    - `python3 manage.py loaddata categories`
+    - `python3 manage.py loaddata products`
+5. Create a superuser. The superuser has acces to the admin environment.
+    - `python3 manage.py createsuperuser`
+    - Enter your username, email and password.
+6. Run the app: Open your terminal window in your IDE. Type: `python3 manage.py runserver` and run the app.
+7. To acces the admin environment, you can add `/admin` at the end of your url and login with the superuser.
+
+
+#### Heroku Deployment  
+1. Set up local workspace for Heroku 
+    - In terminal window of your IDE type: `pip3 freeze -- local > requirements.txt.` (The file is needed for Heroku to know which filed to install.)
+    - Create a Procfile with the following text: `web: gunicorn <name app>.wsgi:application` (The file is needed for Heroku to know which file is needed as entry point.)
+    - Push all these files to your GitHub reposity.
+2. Set up Heroku
+    - Create a Heroku account and create a new app and select your region. 
+    - Go to resources in Heroku and search for **postgres**. Select **Hobby dev - Free** and click on the provision button to add it to the project.
+    - Go to the settings app in Heroku and go to **Config Vars**. Click on **Reveal Config Vars** and add the following config variables:
+
+    | KEY            | VALUE         |
+    |----------------|---------------|
+    | AWS_ACCESS_KEY_ID | `<aws access key>`  |
+    | AWS_SECRET_ACCESS_KEY | `<aws secret access key>`  |
+    | DATABASE_URL| `<postgres database url>`  |
+    | EMAIL_HOST_PASS | `<email password(generated by Gmail)>` |
+    | EMAIL_HOST_USER| `<email address>`  |
+    | SECRET_KEY | `<your secret key>`  |
+    | STRIPE_PUBLIC_KEY| `<your stripe public key>`  |
+    | STRIPE_SECRET_KEY| `<your stripe secret key>`  |
+    | STRIPE_WH_SECRET| `<your stripe wh key>`  |
+    | USE_AWS | `True`  |
+
+3. Set up Database
+    - Copy the **DATABASE_URL** (Postgres URL) from the config variables of Heroku and past it into the default database in `setting.py`
+
+    ```
+    DATABASES = {
+        'default': dj_database_url.parse("<DATABASE_URL here>")
+    }
+    ```
+    **NOTE:** This setup for the databases is temporary for deployment to Heroku.
+    - Migrate the models to create the database by the following commands:
+        - `python3 manage.py makemigrations`
+        - `python3 manage.py migrate`
+    - Load the data fixtures for categories and product in this exact order:
+        - `python3 manage.py loaddata categories`
+        - `python3 manage.py loaddata products`
+    - Create a superuser. The superuser has acces to the admin environment.
+        - `python3 manage.py createsuperuser`
+        - Enter your username, email and password.
+    - Now you can remove the DATABASE_URL from `settings.py` and set the 'old' default DATABSE settings.
+    - Adjust the ALLOWED_HOSTS in you settings.py with the following:
+    
+    ```
+    ALLOWED_HOSTS = ['<your Heroku app URL>', 'localhost]
+    ```
+    - Push the code to Github.
+4. Connect with Heroku 
+    - Click on the **Connect to GitHub** section in the deploy tab in Heroku. 
+        - Search your repository to connect with it.
+        - When your repository appears click on **connect** to connect your repository with the Heroku. 
+    - Set automatic deploment: Go to the deploy tab in Heroku and scroll down to **Automatic deployments**. Click on **Enable Automatic Deploys**. By **Manual deploy** click on **Deploy Branch**.
+Heroku will receive the code from Github and host the app using the required packages. 
+Click on **Open app** in the right corner of your Heroku account. The app wil open and the live link is available from the address bar. 
+
+#### Hosting static and media files with AWS
+The static and media files are hosted in the AWS S3 Bucket. To host them you will need an account and create an S3 bucket and set a group, policy and user in the IAM environment. 
+Read more about the the S3 Bucket storage [here](https://aws.amazon.com/s3/). For more information about the storage in your project [click here](https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html).
+
+## Credits
+
+### Content
+- This site was built following the available Code Institue learning materials, specifically the Boutique Ado ecommerce mini-project, with the exception of the contact app. 
+- The rotating word carousel on the index page was built from this [Simple Typing Carousel](https://codepen.io/gschier/pen/jkivt) by Gregory Schier.
+
+### Media
+- The photos used in this site were obtained from Pixabay. The product mockups were developed using [Artboard Studio](https://artboard.studio/) and [Smart Mockups](https://smartmockups.com/) 
+
+### Acknowledgements
+- Tutor support at the Code Institute
+
