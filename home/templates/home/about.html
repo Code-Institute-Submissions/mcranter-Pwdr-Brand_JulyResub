@@ -5,7 +5,7 @@
 {% block content %}        
     <div class="container">
         <div class="row">
-            <div class="col"><img class="imageman" src="media/man.jpg"></img></div>
+            <div class="col"><img class="imageman" src="{{ MEDIA_URL }}man.jpg" alt="man lifting"></img></div>
         </div>    
         <div class="row">
             <div class="col-12 card-about2">
@@ -59,7 +59,7 @@
             </div>
         </div>    
         <div class="row">
-            <div class="col-12"><img class="imageman" src="media/benefits.png"></img></div>
+            <div class="col-12"><img class="imageman" src="{{ MEDIA_URL }}benefits.png" alt="benefits"></div>
         </div>  
     </div>
 {% endblock %}
