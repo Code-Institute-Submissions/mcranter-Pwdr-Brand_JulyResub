@@ -43,27 +43,77 @@ But really, Pwdr isn't a brand - it's more of a *lifestyle*.
 - As an administrator, I want the option to delete any product/programme I need to.
 - As an administrator, I want the option to add any product or programme.
 
-*   ### Design
+### Design
 
-    -   #### Colour Scheme
-        -   The main colours used are Black and white, with occasional avocado green to match the tones of the background image. 
-    -   #### Typography
-        -   The Source Code Pro font is the main font used throughout the site. This font was chosen for its simplicity.
-    -   #### Imagery
-        -   The main background image is a mocked up product shot of fictional product Pwdr Sport.
-
-    -   #### Layout
-        -   Bootstrap was used to assist with the layout and styling of this site. 
+-   #### Colour Scheme
+    -   The main colours used are Black and white, with occasional avocado green to match the tones of the background image. 
+-   #### Typography
+    -   The Source Code Pro font is the main font used throughout the site. This font was chosen for its simplicity.
+-   #### Imagery
+    -   The main background image is a mocked up product shot of fictional product Pwdr Sport.
+-   #### Layout
+    -   Bootstrap was used to assist with the layout and styling of this site. 
 
 ### Wireframes
 
-- The wireframes for this site were created on Figma, and are viewable [here](https://www.figma.com/file/5EMRswrUyHlPLnpPgGfiPw/Milestone-4).
+- The wireframes for this site were created using Figma, and are viewable [here](https://www.figma.com/file/5EMRswrUyHlPLnpPgGfiPw/Milestone-4).
 
 ### Database 
 - Here is the schema for the store's database:
 
 ![](media/db-schema.png)
 
+---
+
+## Testing
+### Manual Testing.
+### Functionality
+1. Search function:
+    - Go to the Home page
+    - Try to submit an empty search and verify that an error message about the required fields appears
+    - Try to submit a search with less than 3 letters verify that a relevant error message appears
+    - Try to submit a search with all inputs valid and verify that a success message appears.
+
+2. Login Page:
+    - Try to submit incorrect login details and verify an error appears.
+
+3. Register Page
+    - Try to register using an existing username and verify error appears
+    - Try to register a username using fewer than 3 letters and verify error appears. 
+
+4. Product Page:
+    - Attempt to add a number of products exceeding 99.
+    - Attempt to click on a sum of zero products.
+
+5. Checkout Page:
+    - Attempt to enter an email address without an @ symbol to trigger an error.
+    - Attempt to include text in the phone numbers field to trigger an error.
+    - Enter invalid credit card number - this will trigger an error.
+
+## 3. Validators
+
+ - **[HTML Validator](https://validator.w3.org/):** No errors found.
+    
+    **Result:** 
+    - 
+
+- **[CSS Validator](https://jigsaw.w3.org/css-validator/):** No errors found.
+
+    **Results:**
+    - 
+
+
+- **[JS Hint](https://jshint.com/):** No errors found.
+    
+    **Results:**
+    - Warnings 
+    - 
+
+- **[Python validator | PEP8](http://pep8online.com/):** No errors found
+
+    **Results:** No errors found!
+
+---
 
 ### Existing features 
 
@@ -160,6 +210,12 @@ But really, Pwdr isn't a brand - it's more of a *lifestyle*.
 - The following errors are included: 404 and 500.
 
 ---
+
+## Bugs
+-  Unresolved issue: issue with favicon not appearing. 
+
+---
+
 ## Technologies used
 
 #### Languages used
@@ -268,7 +324,7 @@ To make a local clone, follow the following steps.
 
 #### Heroku Deployment  
 1. Set up local workspace for Heroku 
-    - In terminal window of your IDE type: `pip3 freeze -- local > requirements.txt.` (The file is needed for Heroku to know which filed to install.)
+    - In terminal window of your IDE type: `pip3 freeze -- local > requirements.txt.`
     - Create a Procfile with the following text: `web: gunicorn <name app>.wsgi:application` (The file is needed for Heroku to know which file is needed as entry point.)
     - Push all these files to your GitHub reposity.
 2. Set up Heroku
