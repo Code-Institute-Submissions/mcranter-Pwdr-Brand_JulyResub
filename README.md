@@ -3,6 +3,8 @@
 Pwdr is a fitness brand, selling healthy vegan powder, bars, merchandise and fitness programmes. 
 But really, Pwdr isn't a brand - it's more of a *lifestyle*.
 
+Visit the deployed site [here](https://pwdr-brand.herokuapp.com/).
+
 ![](media/home.png)
 
 ## UX
@@ -94,24 +96,27 @@ But really, Pwdr isn't a brand - it's more of a *lifestyle*.
 
  - **[HTML Validator](https://validator.w3.org/):** No errors found.
     
-    **Result:** 
-    - 
+    **Sample Results:** 
+    - Bag Total.html ![](media/bag-total-validatator.png)
+    - Bag Html![](media/bag-validator.png)
+    - Checkout buttons Html![](media/checkout-buttons-validatator.png)
 
 - **[CSS Validator](https://jigsaw.w3.org/css-validator/):** No errors found.
 
-    **Results:**
-    - 
+    **Sample Results:**
+    - 404 ![](media/css-validator.png)
+    - 505 ![](media/css2-validator.png)
 
 
-- **[JS Hint](https://jshint.com/):** No errors found.
+- **[JS Hint](https://jshint.com/):** 
     
-    **Results:**
-    - Warnings 
-    - 
+    **Sample Results:**
+    -  Error:'template literal syntax' is only available in ES6 (use 'esversion: 6').
+    -  Stripe_elements.js ![](media/stripe-js-validator.png)
 
 - **[Python validator | PEP8](http://pep8online.com/):** No errors found
 
-    **Results:** No errors found!
+    **Results:** No errors found beyond those trigger by long lines which were auto-generate during migrations.
 
 ---
 
