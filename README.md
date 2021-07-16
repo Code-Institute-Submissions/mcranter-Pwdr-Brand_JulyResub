@@ -68,29 +68,7 @@ Visit the deployed site [here](https://pwdr-brand.herokuapp.com/).
 ---
 
 ## Testing
-### Manual Testing.
-### Functionality
-1. Search function:
-    - Go to the Home page
-    - Try to submit an empty search and verify that an error message about the required fields appears
-    - Try to submit a search with less than 3 letters verify that a relevant error message appears
-    - Try to submit a search with all inputs valid and verify that a success message appears.
-
-2. Login Page:
-    - Try to submit incorrect login details and verify an error appears.
-
-3. Register Page
-    - Try to register using an existing username and verify error appears
-    - Try to register a username using fewer than 3 letters and verify error appears. 
-
-4. Product Page:
-    - Attempt to add a number of products exceeding 99.
-    - Attempt to click on a sum of zero products.
-
-5. Checkout Page:
-    - Attempt to enter an email address without an @ symbol to trigger an error.
-    - Attempt to include text in the phone numbers field to trigger an error.
-    - Enter invalid credit card number - this will trigger an error.
+- Testing efforts outlined [here](testing.md)
 
 ## 3. Validators
 
@@ -116,7 +94,7 @@ Visit the deployed site [here](https://pwdr-brand.herokuapp.com/).
 
 - **[Python validator | PEP8](http://pep8online.com/):** No errors found
 
-    **Results:** No errors found beyond those trigger by long lines which were auto-generate during migrations.
+    **Results:** No errors found beyond those trigger by long lines which were auto-generated during migrations.
 
 ---
 
