@@ -28,7 +28,7 @@ def add_review(request, product_id):
                 title=title,
                 rating=rating,
                 description=description)
-            messages.success(request, 'Successfully added review.')
+            messages.success(request, 'Review Added!')
             return redirect(reverse('product_detail', args=[product_id]))
         else:
             messages.error(request, 'Failed to add review. \
@@ -42,5 +42,3 @@ def add_review(request, product_id):
     }
 
     return render(request, template, context)
-
-
