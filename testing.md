@@ -6,7 +6,7 @@
   * [Validators](#validators)
 
 ### Manual Testing.
-### Functionality
+#### Functionality
 
 1. Search function: Home Page
     - Tested search fuctionality by submitting an empty search in order to verify that an error message appeared.
@@ -20,7 +20,7 @@
     ![](media/test-terms.png)
 
 
-    - Tested search functionality by submitting searches for shortened terms of three and two letters (such as 'ber''wor','ba') to see if all relevent items were returned.
+    - Tested search functionality by submitting searches for shortened terms of three and two letters (such as 'ber', 'wor' ,'ba') to see if all relevent items were returned.
     - Result: All expected search items were returned. 
     ![](media/test-search-small.png)
 
@@ -56,9 +56,9 @@
 
 5. Checkout Page:
     - Attempted to enter an email address without an @ symbol in order to verify the appearance of an error message.
-    - Result: Error message popped after clicking complete order, reading "Please include an @ in the email address."
+    - Result: Error message appeared after clicking 'complete order' button, reading 'Please include an @ in the email address.'
     ![](media/checkout-@.png)
-    - Attempted to include text in the phone numbers field in order to verify the appearance of an error message.
+    - Attempted to include text in the phone number field in order to verify the appearance of an error message.
     - Result: Error message popped reading 'Please match the format requested'.
     ![](media/text-phone.png)
 
@@ -71,14 +71,15 @@
 
 ### Validators
 
- - **[HTML Validator](https://validator.w3.org/):** No errors found.
+ - **[HTML Validator](https://validator.w3.org/):** 
+ Each HTML file on the site was run through this validator. For brevity, I include a selection of sample results. No errors were found. 
     
     **Sample Results:** 
     - Bag Total.html ![](media/bag-total-validatator.png)
     - Bag Html![](media/bag-validator.png)
     - Checkout buttons Html![](media/checkout-buttons-validatator.png)
 
-- **[CSS Validator](https://jigsaw.w3.org/css-validator/):** No errors found.
+- **[CSS Validator](https://jigsaw.w3.org/css-validator/):** Each CSS file on the site was run through this validator. For brevity, I include a selection of sample results. No errors were found.
 
     **Sample Results:**
     - 404 ![](media/css-validator.png)
@@ -86,12 +87,13 @@
 
 
 - **[JS Hint](https://jshint.com/):** 
+Each Javascript file on the site was run through this validator. For brevity, I include a selection of sample results. No errors were found.
     
     **Sample Results:**
     -  Error:'template literal syntax' is only available in ES6 (use 'esversion: 6').
     -  Stripe_elements.js ![](media/stripe-js-validator.png)
 
-- **[Python validator | PEP8](http://pep8online.com/):** No errors found
+- **[Python validator | PEP8](http://pep8online.com/):** Each Python file on the site was run through this validator. For brevity, I include a selection of sample results. No errors were found.
 
     **Results:** No errors found beyond those trigger by long lines which were auto-generated during migrations.
 

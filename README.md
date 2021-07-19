@@ -395,6 +395,7 @@ Click on **Open app** in the right corner of your Heroku account. The app wil op
 The static and media files are hosted in the AWS S3 Bucket. To host them you will need an account and create an S3 bucket and set a group, policy and user in the IAM environment. 
 Read more about the the S3 Bucket storage [here](https://aws.amazon.com/s3/). For more information about the storage in your project [click here](https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html).
 
+
 ## Credits
 
 ### Content
@@ -408,5 +409,5 @@ Read more about the the S3 Bucket storage [here](https://aws.amazon.com/s3/). Fo
 - The photos used in this site were obtained from Pixabay. The product mockups were developed using [Artboard Studio](https://artboard.studio/) and [Smart Mockups](https://smartmockups.com/). The logos and luchador images were created using [Canva](https://www.canva.com/).
 
 ### Acknowledgements
-- Tutor support at the Code Institute, who offered invaluable assistance at various points and also Huel, which provided the inspiration for this particular type of ecommerce site.
+- My mentor, Precious Ijege, tutor support at the Code Institute, who offered invaluable assistance at various points and also [Huel](huel.com), which provided the inspiration for this particular type of ecommerce site.
 
