@@ -70,33 +70,7 @@ Visit the deployed site [here](https://pwdr-brand.herokuapp.com/).
 ## Testing
 - Testing efforts outlined [here](testing.md)
 
-## 3. Validators
 
- - **[HTML Validator](https://validator.w3.org/):** No errors found.
-    
-    **Sample Results:** 
-    - Bag Total.html ![](media/bag-total-validatator.png)
-    - Bag Html![](media/bag-validator.png)
-    - Checkout buttons Html![](media/checkout-buttons-validatator.png)
-
-- **[CSS Validator](https://jigsaw.w3.org/css-validator/):** No errors found.
-
-    **Sample Results:**
-    - 404 ![](media/css-validator.png)
-    - 505 ![](media/css2-validator.png)
-
-
-- **[JS Hint](https://jshint.com/):** 
-    
-    **Sample Results:**
-    -  Error:'template literal syntax' is only available in ES6 (use 'esversion: 6').
-    -  Stripe_elements.js ![](media/stripe-js-validator.png)
-
-- **[Python validator | PEP8](http://pep8online.com/):** No errors found
-
-    **Results:** No errors found beyond those trigger by long lines which were auto-generated during migrations.
-
----
 
 ### Existing features 
 
@@ -113,8 +87,8 @@ Visit the deployed site [here](https://pwdr-brand.herokuapp.com/).
 
 
 #### 2. Footer
-- **Relevant links**  FAQs, About Us and Contact are placed at the bottom of the footer.
-- The **social media links** are placed beneath the preceding elements. 
+- **Relevant links**  FAQs, About Us and Contact are placed in the footer.
+- The **social media links** are placed at the bottom of the footer.
 
 
 #### 3. Home page 
@@ -146,11 +120,10 @@ Visit the deployed site [here](https://pwdr-brand.herokuapp.com/).
 - Gives **an overview of all items** that are in the shopping bag, the overview information includes; image, name, size, quantity, price and subtotal.
 - users can **update the quantity** of the items they have.
 - users can **remove items** from their order.
-- There's an **overview of the total price, the delivery costs and the grant total** of the order.
-- There's a button with **‘keep shopping’** that links to the product page. 
-- There's a button with **‘go to checkout’** to continue the purchase.
+- There's an **overview of the total price, the delivery costs and the grand total** of **'Keep Shopping’** that links to the product page. 
+- There's a button reading **‘Secure Checkout’** to continue the purchase.
 
-![](media/mockup-about1.jpg)
+![](media/secure-checkout.png)
 
 #### 8. Checkout page 
 - The **order summary** gives information about the item, including: name, size, price, total, delivery costs and grand total. 
@@ -369,7 +342,7 @@ Read more about the the S3 Bucket storage [here](https://aws.amazon.com/s3/). Fo
 ## Credits
 
 ### Content
-- This site was built following the available Code Institue learning materials, specifically the Boutique Ado ecommerce mini-project, with the exception of the contact app(made by me) and otherwise stated sources. 
+- This site was built following the available Code Institue learning materials, specifically the Boutique Ado ecommerce mini-project, with the exception of the contact app (made by me) and otherwise stated sources. 
 - The rotating word carousel on the index page was built using this [Simple Typing Carousel](https://codepen.io/gschier/pen/jkivt) by Gregory Schier.
 - The 404 custom page was built using [404 Error Page Smoke From Toaster](https://codepen.io/wikyware-net/pen/xywexE) by WikiWear Net.
 - The 500 custom page was built using [500 - Internal Error by Gayane](https://codepen.io/gaiaayan/pen/QVVxaR).

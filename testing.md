@@ -39,10 +39,53 @@
 
 
 4. Product Page:
-    - Attempt to add a number of products exceeding 99.
-    - Attempt to click on a sum of zero products.
+    - Attempted to add a number of products exceeding 99 to shopping bag in order verify that an error message appeared.
+    - Result: An error message popped up displaying the text "Value must be less than or equal to 99"
+    ![](media/product-page-greater-100.png)
+
+    - Attempted to add on a sum of zero products to the shopping bag in order to verify an error message appeared.
+    - Result: An error message popped up displaying the text "Value must be greater than or equal to one"
+    ![](media/product-page-less.png)
+
 
 5. Checkout Page:
-    - Attempt to enter an email address without an @ symbol to trigger an error.
-    - Attempt to include text in the phone numbers field to trigger an error.
-    - Enter invalid credit card number - this will trigger an error.
+    - Attempted to enter an email address without an @ symbol in order to verify the appearance of an error message.
+    - Result: Error message popped after clicking complete order, reading "Please include an @ in the email address."
+    ![](media/checkout-@.png)
+    - Attempted to include text in the phone numbers field in order to verify the appearance of an error message.
+    - Result: Error message popped reading 'Please match the format requested'.
+    ![](media/text-phone.png)
+
+    - Attempted to enter an invalid credit card number in order to verify the appearance of an error message.
+    - Result: An error message appeared, reading 'Your card number is invalid'. 
+    ![](media/credit-card.png)
+
+
+## Automatic Testing
+
+### Validators
+
+ - **[HTML Validator](https://validator.w3.org/):** No errors found.
+    
+    **Sample Results:** 
+    - Bag Total.html ![](media/bag-total-validatator.png)
+    - Bag Html![](media/bag-validator.png)
+    - Checkout buttons Html![](media/checkout-buttons-validatator.png)
+
+- **[CSS Validator](https://jigsaw.w3.org/css-validator/):** No errors found.
+
+    **Sample Results:**
+    - 404 ![](media/css-validator.png)
+    - 505 ![](media/css2-validator.png)
+
+
+- **[JS Hint](https://jshint.com/):** 
+    
+    **Sample Results:**
+    -  Error:'template literal syntax' is only available in ES6 (use 'esversion: 6').
+    -  Stripe_elements.js ![](media/stripe-js-validator.png)
+
+- **[Python validator | PEP8](http://pep8online.com/):** No errors found
+
+    **Results:** No errors found beyond those trigger by long lines which were auto-generated during migrations.
+
