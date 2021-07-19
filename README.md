@@ -7,6 +7,56 @@ Visit the deployed site [here](https://pwdr-brand.herokuapp.com/).
 
 ![](media/home.png)
 
+## Contents
+ - [UX](#ux)
+    + [Navigation](#navigation)
+      
+    + [Registration & User Accounts](#registration---user-accounts)
+    + [Sorting & Searching](#sorting---searching)
+    + [Purchasing & Checkout](#purchasing---checkout)
+
+    + [Design](#design)
+      - [Colour Scheme](#colour-scheme)
+      - [Typography](#typography)
+      - [Imagery](#imagery)
+      - [Layout](#layout)
+    + [Wireframes](#wireframes)
+    + [Database](#database)
+  * [Testing](#testing)
+  * [Existing features](#existing-features)
+      - [1. Navbar](#1-navbar)
+      - [2. Footer](#2-footer)
+      - [3. Home page](#3-home-page)
+      - [4. Product page](#4-product-page)
+      - [5. Programme page](#5-programme-page)
+      - [6. Product Detail page](#6-product-detail-page)
+      - [7. The Shopping page](#7-the-shopping-page)
+      - [8. Checkout page](#8-checkout-page)
+      - [9. Checkout success page](#9-checkout-success-page)
+      - [10. The Profile page](#10-the-profile-page)
+      - [11. FAQ page](#11-faq-page)
+      - [12. Contact page](#12-contact-page)
+      - [13. About Us](#13-about-us)
+      - [14. Error pages](#14-error-pages)
+  * [Bugs](#bugs)
+  * [Technologies used](#technologies-used)
+      - [Languages used](#languages-used)
+      - [Frameworks, libraries & other](#frameworks--libraries---other)
+      - [Databases](#databases)
+      - [Testing tools used](#testing-tools-used)
+  * [Deployment](#deployment)
+      - [Requirements for Deployment:](#requirements-for-deployment-)
+      - [Clone the project](#clone-the-project)
+      - [Working with the local copy](#working-with-the-local-copy)
+      - [Heroku Deployment](#heroku-deployment)
+      - [Hosting static and media files with AWS](#hosting-static-and-media-files-with-aws)
+  * [Credits](#credits)
+    + [Content](#content)
+    + [Media](#media)
+    + [Acknowledgements](#acknowledgements)
+
+
+
 ## UX
  
 ### Navigation
@@ -277,7 +327,7 @@ To make a local clone, follow the following steps.
 4. Load the data fixtures for categories and product in this exact order:
     - `python3 manage.py loaddata categories`
     - `python3 manage.py loaddata products`
-5. Create a superuser. The superuser has acces to the admin environment.
+5. Create a superuser. The superuser has access to the admin environment.
     - `python3 manage.py createsuperuser`
     - Enter your username, email and password.
 6. Run the app: Open your terminal window in your IDE. Type: `python3 manage.py runserver` and run the app.
@@ -288,7 +338,7 @@ To make a local clone, follow the following steps.
 1. Set up local workspace for Heroku 
     - In terminal window of your IDE type: `pip3 freeze -- local > requirements.txt.`
     - Create a Procfile with the following text: `web: gunicorn <name app>.wsgi:application` (The file is needed for Heroku to know which file is needed as entry point.)
-    - Push all these files to your GitHub reposity.
+    - Push all these files to your GitHub repository.
 2. Set up Heroku
     - Create a Heroku account and create a new app and select your region. 
     - Go to resources in Heroku and search for **postgres**. Select **Hobby dev - Free** and click on the provision button to add it to the project.
@@ -352,10 +402,11 @@ Read more about the the S3 Bucket storage [here](https://aws.amazon.com/s3/). Fo
 - The rotating word carousel on the index page was built using this [Simple Typing Carousel](https://codepen.io/gschier/pen/jkivt) by Gregory Schier.
 - The 404 custom page was built using [404 Error Page Smoke From Toaster](https://codepen.io/wikyware-net/pen/xywexE) by WikiWear Net.
 - The 500 custom page was built using [500 - Internal Error by Gayane](https://codepen.io/gaiaayan/pen/QVVxaR).
+- <a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a>
 
 ### Media
 - The photos used in this site were obtained from Pixabay. The product mockups were developed using [Artboard Studio](https://artboard.studio/) and [Smart Mockups](https://smartmockups.com/). The logos and luchador images were created using [Canva](https://www.canva.com/).
 
 ### Acknowledgements
-- Tutor support at the Code Institute, who offered invaluable assistance at various points and Huel, which provided the inspiration for this particular type of ecommerce site.
+- Tutor support at the Code Institute, who offered invaluable assistance at various points and also Huel, which provided the inspiration for this particular type of ecommerce site.
 

@@ -1,4 +1,10 @@
 ## Testing
+
+- [Manual Testing.](#manual-testing)
+  * [Functionality](#functionality)
+- [Automatic Testing](#automatic-testing)
+  * [Validators](#validators)
+
 ### Manual Testing.
 ### Functionality
 
