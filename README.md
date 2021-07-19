@@ -14,7 +14,7 @@ Visit the deployed site [here](https://pwdr-brand.herokuapp.com/).
 - As a first time customer, I want to find and purchase products.
 - As a first time customer, I want to be able to search.
 - As a first time customer, I want see what this site/service can offer
-- As a first time customer, I want the option to sign up and add my own listing. 
+- As a first time customer, I want the option to sign up/ create an account. 
 
 ### Registration & User Accounts
 #### Site User
@@ -22,7 +22,7 @@ Visit the deployed site [here](https://pwdr-brand.herokuapp.com/).
 - As a site user, I want to login/out easily.
 - As a site user, I want to get email registration confirmation when I signup.
 - As a site user, I want to see personalised info including: order information.
-- As a site user, I want to edit my address or other account elements
+- As a site user, I want to edit my address or other account elements.
 
 ### Sorting & Searching
 #### Customer
@@ -45,16 +45,21 @@ Visit the deployed site [here](https://pwdr-brand.herokuapp.com/).
 - As an administrator, I want the option to delete any product/programme I need to.
 - As an administrator, I want the option to add any product or programme.
 
+---
+
+
 ### Design
 
 -   #### Colour Scheme
     -   The main colours used are Black and white, with occasional avocado green to match the tones of the background image. 
 -   #### Typography
-    -   The Source Code Pro font is the main font used throughout the site. This font was chosen for its simplicity.
+    -   The Source Code Pro Google font is the main font used throughout the site. This font was chosen for its simplicity.
 -   #### Imagery
     -   The main background image is a mocked up product shot of fictional product Pwdr Sport.
 -   #### Layout
     -   Bootstrap was used to assist with the layout and styling of this site. 
+
+---
 
 ### Wireframes
 
@@ -70,9 +75,10 @@ Visit the deployed site [here](https://pwdr-brand.herokuapp.com/).
 ## Testing
 - Testing efforts outlined [here](testing.md)
 
+---
 
 
-### Existing features 
+## Existing features 
 
 #### 1. Navbar
 - The site name is clearly visible in the left of the navbar. The name redirects to the home page. 
