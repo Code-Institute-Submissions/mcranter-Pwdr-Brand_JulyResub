@@ -1,0 +1,22 @@
+<div class="row mt-5 pb-5">
+    {% for review in reviews %}
+    <div class="col-12 col-lg-4 text-center">
+        <p class="mb-0 fw-bold text-uppercase">{{ review.title }}</p>
+        <p><small class="text-secondary">rating: </small>{{ review.rating }} / 5</p>
+        <p>"{{ review.description }}"</p>
+        <div class="row">
+            <div class="col">
+                <p class="text-center">{{ review.user }}</p>
+                <p class="text-center mb-0"><small>{{ review.date_posted|date:"d M, Y" }}</small></p>
+                <!--shows the edit/delete pills if the user is authenticated-->
+                {% if request.user.is_authenticated %}
+                <small class="text-center">
+                    <a class="badge badge-warning" href="{% url 'edit_review' review.id %}">Edit</a> |
+                    <a class="badge badge-danger" href="{% url 'delete_review' review.id %}">Delete</a>
+                </small>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>

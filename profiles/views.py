@@ -49,3 +49,15 @@ def order_history(request, order_number):
     }
 
     return render(request, template, context)
+
+
+def review_history(request, review_number):
+    review = get_object_or_404(Review, review_number=review_number)
+
+    template = 'reviews/review_history.html'
+    context = {
+        'review': review,
+        'from_profile': True,
+    }
+
+    return render(request, template, context)

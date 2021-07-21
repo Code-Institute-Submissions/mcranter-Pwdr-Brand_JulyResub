@@ -6,6 +6,8 @@ from django.db.models.functions import Lower
 
 from .models import Product, Category
 from .forms import ProductForm
+from reviews.models import Review
+from reviews.forms import ReviewForm
 
 # Create your views here.
 
