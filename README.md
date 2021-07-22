@@ -57,8 +57,7 @@ Visit the deployed site [here](https://pwdr-brand.herokuapp.com/).
 
 
 
-## UX
- 
+## UX - User Stories 
 ### Navigation
 #### Customer
 - As a first time customer, I want to find and purchase products.
