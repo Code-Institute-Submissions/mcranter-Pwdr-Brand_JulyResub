@@ -11,6 +11,8 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pwdr.settings')
-
+if os.getenv("ENV") == "Heroku":
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pwdr.settings')
+else: 
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pwdr.settings')
 application = get_wsgi_application()
