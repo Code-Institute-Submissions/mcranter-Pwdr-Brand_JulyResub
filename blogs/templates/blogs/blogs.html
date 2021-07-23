@@ -23,15 +23,15 @@
     {% if request.user.is_superuser %}
     <div class="row">
         <div class="col text-center mt-3">
-            <a href="{% url 'add_post' %}" class="btn btn-outline-black rounded-0">Add Blog</a>
+            <a href="{% url 'add_post' %}" class="btn btn-black rounded-0">Add Blog</a>
             <hr class="w-50 mb-1">
         </div>
     </div>
     {% endif %}
-    <!--display blogs cards from db-->
-    <div class="col-md-8 mt-3 left">
+    <!--display blog posts-->
+    <div class="col-md-8 mt-3 pl-3">
         {% for post in posts %}
-        <div class="card border-2 mb-3">
+        <div class="card border-2 mx-auto">
             {% if post.image %}
             <img class="card-img-top blog-card-img" src="{{ post.image.url }}" alt="">
             {% else %}
@@ -39,15 +39,15 @@
             {% endif %}
             <div class="card-body">
                 <h2 class="card-title">{{ post.title }}</h2>
-                <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
+                <p class="card-text text-muted h6">{{ post.author }} | {{ post.created}} </p>
                 <p class="card-text">{{post.content|slice:":200" }}</p>
                 <a href="{% url 'post_detail' post.slug  %}" class="btn btn-blue logo-font">Read More ...</a>
                 {% if request.user.is_superuser %}
                 <!-- shows edit/delete option if the user is a superuser-->
-                <small class="ml-3">
-                    <a class="badge badge-warning" href="{% url 'edit_post' post.slug %}">Edit</a> |
-                    <a class="badge badge-danger" href="{% url 'delete_post' post.slug %}">Delete</a>
-                </small>
+                    <small class="ml-3">
+                        <i class="fas fa-pen text-muted mr-1"></i><a class="text-muted" href="{% url 'edit_post' post.slug %}">Edit</a> |
+                        <a class="text-danger" href="{% url 'delete_post' post.slug %}">Delete</a>
+                    </small>
                 {% endif %}
             </div>
         </div>
