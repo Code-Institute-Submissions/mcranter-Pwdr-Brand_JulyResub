@@ -52,13 +52,14 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
     'contact',
-    'reviews',
 
     # Other
     'crispy_forms',
     'storages',
     'embed_video',
     'widget_tweaks',
+    'reviews',
+    'blogs'
 ]
 
 
