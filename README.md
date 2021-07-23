@@ -214,9 +214,19 @@ Visit the deployed site [here](https://pwdr-brand.herokuapp.com/).
 ![](media/mockup-about.jpg)
 
 #### 13. About Us
-- The About Us page is filled with Lorem Ipsum placeholder text. 
+- The About Us page is filled with Lorem Ipsum placeholder text.
 
-#### 14. Error pages 
+#### 14. Review Feature
+- Users who are logged in can add reviews to products and edit reviews they have previously posted.
+- These reviews appear horizontally under the product on the product detail page, appearing left to right.
+- The format reviews consist of: title, rating, a brief review, user name, date and edit | delete options.
+
+#### 15. Blog Page
+- The blog section contains vertically ordered posts on the subjects of fitness and health, reflecting the content of the site and by extension the products available for purchase. The Author information and date the content was posted appears along with the opening paragraph of the piece.
+- After clicking on the 'Read More' option, the user is taken to the full blog post which contains the text as well as a back link at the bottom. 
+- Only the superuser sees the option to edit or delete the blog post. 
+
+#### 16. Error pages 
 - There are custom error handling pages on this site. The errors are displayed in the style of the website. 
 - The following errors are included: 404 and 500.
 
@@ -245,7 +255,7 @@ Visit the deployed site [here](https://pwdr-brand.herokuapp.com/).
 
 #### Frameworks, libraries & other
 - [Django](https://www.djangoproject.com/) 
-    - The GitPod is used as Python framework for the project.
+    - Django and Python framework were used for the project.
 - [Gitpod](https://www.gitpod.io/) 
     - The GitPod is used to develop the project.
 - [Pip3](https://pip.pypa.io/en/stable/)
