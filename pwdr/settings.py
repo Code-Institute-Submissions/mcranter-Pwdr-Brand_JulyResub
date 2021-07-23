@@ -59,7 +59,7 @@ INSTALLED_APPS = [
     'embed_video',
     'widget_tweaks',
     'reviews',
-    'blogs'
+    'blogs',
 ]
 
 
