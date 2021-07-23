@@ -35,10 +35,10 @@ def add_post(request):
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
             post = form.save()
-            messages.success(request, "SUCCESS")
+            messages.success(request, "Post Added")
             return redirect(reverse("post_detail", args=[post.slug]))
         else:
-            messages.error(request, "FAILED")
+            messages.error(request, "NOPE")
     else:
         form = PostForm()
 
@@ -75,7 +75,7 @@ def edit_post(request, slug):
 
 
 def delete_post(request, slug):
-    """Delete an blog"""
+    """Delete a blog"""
 
     post = get_object_or_404(Post, slug=slug)
     post.delete()

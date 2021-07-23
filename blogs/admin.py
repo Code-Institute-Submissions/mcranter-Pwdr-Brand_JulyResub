@@ -1,13 +1,12 @@
 from django.contrib import admin
+from .models import Post
 
-# Register your models here.
-from . import views
-from django.urls import path
 
-urlpatterns = [
-    path("", views.post, name="blogs"),
-    path("detail/<slug:slug>/", views.post_detail, name="post_detail"),
-    path("add_blog/", views.add_post, name="add_post"),
-    path("edit_blog/<slug:slug>/", views.edit_post, name="edit_post"),
-    path("delete_blog/<slug:slug>/", views.delete_post, name="delete_post"),
-]
+class PostAdmin(admin.ModelAdmin):
+    list_display = ('title', 'slug', 'created')
+    list_filter = ("status",)
+    search_fields = ['title', 'content']
+    prepopulated_fields = {'slug': ('title',)}
+
+
+admin.site.register(Post, PostAdmin)
