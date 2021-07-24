@@ -245,7 +245,7 @@ Visit the deployed site [here](https://pwdr-brand.herokuapp.com/).
 
 ## Future Features
 - The ability for a logged in user to see their review history on the profile page. 
-- A subscription based option enabling customers to set up a recurring order. 
+- A subscription-based option enabling customers to set up a recurring order. 
 
 ---
 
