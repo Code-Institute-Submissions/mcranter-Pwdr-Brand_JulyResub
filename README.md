@@ -39,6 +39,7 @@ Visit the deployed site [here](https://pwdr-brand.herokuapp.com/).
       - [13. About Us](#13-about-us)
       - [14. Error pages](#14-error-pages)
   * [Bugs](#bugs)
+  * [Future_Features](#bugs)
   * [Technologies used](#technologies-used)
       - [Languages used](#languages-used)
       - [Frameworks, libraries & other](#frameworks--libraries---other)
@@ -64,6 +65,10 @@ Visit the deployed site [here](https://pwdr-brand.herokuapp.com/).
 - As a first time customer, I want to be able to search.
 - As a first time customer, I want see what this site/service can offer
 - As a first time customer, I want the option to sign up/ create an account. 
+
+#### Site User
+- As a potential customer, I want to see what the site has to offer beyond commercial products.
+- As a person interested in health and fitness, I want to see relevant content.
 
 ### Registration & User Accounts
 #### Site User
@@ -234,7 +239,13 @@ Visit the deployed site [here](https://pwdr-brand.herokuapp.com/).
 
 ## Bugs
 -  Unresolved issue: issue with favicon not appearing.
--  Footer appears  
+-  The text on the blog detail page contains no formatting. 
+
+---
+
+## Future Features
+- The ability for a logged in user to see their review history on the profile page. 
+- A subscription based option enabling customers to set up a recurring order. 
 
 ---
 
