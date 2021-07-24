@@ -137,7 +137,7 @@
                         <p class="text-center">{{ review.user }}</p>
                         <p class="text-center mb-0"><small>{{ review.date_posted|date:"d M, Y" }}</small></p>
                         <!--shows the edit/delete options if the user is the user who posted it, or the superuser-->
-                        {% if request.user.is_review.user %}
+                        {% if request.user == review.user %}
                             <small class="text-center">
                                 <a class="text-muted" href="{% url 'edit_review' review.id %}">Edit</a> |
                                 <a class="text-danger" href="{% url 'delete_review' review.id %}">Delete</a>
