@@ -117,7 +117,7 @@ Visit the deployed site [here](https://pwdr-brand.herokuapp.com/).
 ### Database 
 - Here is the schema for the store's database:
 
-![](media/db-schema.png)
+![](media/db-schema-update.png)
 
 ---
 
@@ -233,7 +233,8 @@ Visit the deployed site [here](https://pwdr-brand.herokuapp.com/).
 ---
 
 ## Bugs
--  Unresolved issue: issue with favicon not appearing. 
+-  Unresolved issue: issue with favicon not appearing.
+-  Footer appears  
 
 ---
 
@@ -416,6 +417,7 @@ Read more about the the S3 Bucket storage [here](https://aws.amazon.com/s3/). Fo
 
 ### Media
 - The photos used in this site were obtained from Pixabay. The product mockups were developed using [Artboard Studio](https://artboard.studio/) and [Smart Mockups](https://smartmockups.com/). The logos and luchador images were created using [Canva](https://www.canva.com/).
+- The articles on the blog page were taken from the site [Healthline](https://www.healthline.com/).
 
 ### Acknowledgements
 - My mentor, Precious Ijege, tutor support at the Code Institute, who offered invaluable assistance at various points and also [Huel](huel.com), which provided the inspiration for this particular type of ecommerce site.

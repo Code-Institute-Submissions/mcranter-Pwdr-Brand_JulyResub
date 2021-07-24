@@ -66,6 +66,15 @@
     - Result: An error message appeared, reading 'Your card number is invalid'. 
     ![](media/credit-card.png)
 
+6. Blog Page:
+    - Testing on this page revealed the following alarming information: 1) that any logged in user could see the edit/delete options available, and by extension edit or delete any blog post. 
+    ![](media/blog-testing-edit.png)
+    - Resolved: A simple line of code restricting the visibilty of the edit/delete buttons, as well as the ability to edit or delete any post, fixed this issue. 
+    Once this change was made, I logged in under a non-superuser account and verified that the edit/delete options no longer appeared on either the blogs or blog_details pages. 
+    ![](media/blog-testing.png)
+    ![](media/blog-testing-detail-edit.png)
+
+
 
 ## Automatic Testing
 
