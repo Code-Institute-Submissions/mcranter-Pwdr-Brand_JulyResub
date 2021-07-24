@@ -23,12 +23,14 @@
                 <h1>{% block title %} {{ post.title }} {% endblock title %}</h1>
                 <p class=" text-muted">{{ post.author }} | {{ post.created }}</p>
                 <p class="card-text ">{{ post.content | safe }}</p>
-                <!-- shows edit/delete option if the user is a superuser-->
+                
                 <div class="row">
                     <a href="{% url 'blogs' %}" class="btn btn-outline btn-black">Back</a>
                     <small class="ml-3 mt-2">
+                    {% if request.user.is_superuser %}
                         <i class="fas fa-pen text-muted mr-1"></i><a class="text-muted" href="{% url 'edit_post' post.slug %}">Edit</a> |
                         <a class="text-danger" href="{% url 'delete_post' post.slug %}">Delete</a>
+                    {% endif %}
                     </small>
                 </div>
             </div>
