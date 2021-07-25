@@ -72,7 +72,7 @@
     - Resolved: A simple line of code restricting the visibilty of the edit/delete buttons, as well as the ability to edit or delete any post, fixed this issue. 
     Once this change was made, I logged in under a non-superuser account and verified that the edit/delete options no longer appeared on either the blogs or blog_details pages. 
     ![](media/blog-testing.png)
-    ![](media/blog-testing-detail-edit.png)
+    
 
 
 
