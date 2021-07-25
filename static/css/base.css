@@ -344,6 +344,44 @@ input[name='q']::placeholder {
 
 /* -------------------------------- Media Queries */
 
+/* Safari 10. +later */
+@media not all and (min-resolution:.001dpcm) { 
+    @media {
+    /* index page animation styling */
+
+.top {
+    padding-top: 150px;
+    padding-left: 100px;
+}
+
+.pwdr-is {
+    background-color: white;
+    border-radius: 5%;
+}
+
+.index-shop {
+    padding-left: 400px;
+}
+
+
+.pwdr-is, .index-shop {
+    font-weight: 300;
+    margin: 0.4em 0;
+}
+
+.pwdr-is { font-size: 3.5em; }
+.index-shop {
+    color: #888;
+    font-size: 2em;
+}
+
+.footer-links {
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    }
+}
+
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
