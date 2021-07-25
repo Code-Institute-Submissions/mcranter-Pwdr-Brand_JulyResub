@@ -375,12 +375,13 @@ input[name='q']::placeholder {
     font-size: 2em;
 }
 
+
 .footer-links {
     color: white;
     margin-top: 15px;
     margin-bottom: 15px;
     }
-}
+}}
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
