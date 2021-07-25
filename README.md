@@ -425,6 +425,7 @@ Read more about the the S3 Bucket storage [here](https://aws.amazon.com/s3/). Fo
 - The 404 custom page was built using [404 Error Page Smoke From Toaster](https://codepen.io/wikyware-net/pen/xywexE) by WikiWear Net.
 - The 500 custom page was built using [500 - Internal Error by Gayane](https://codepen.io/gaiaayan/pen/QVVxaR).
 - <a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a>
+- [Stack Overflow](https://stackoverflow.com/questions/16348489/is-there-a-css-hack-for-safari-only-not-chrome/25975282#25975282) user Jeff Clayton for his post outlining safari media queries.
 
 ### Media
 - The photos used in this site were obtained from Pixabay. The product mockups were developed using [Artboard Studio](https://artboard.studio/) and [Smart Mockups](https://smartmockups.com/). The logos and luchador images were created using [Canva](https://www.canva.com/).

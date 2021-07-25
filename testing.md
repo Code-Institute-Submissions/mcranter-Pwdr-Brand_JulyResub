@@ -73,8 +73,10 @@
     Once this change was made, I logged in under a non-superuser account and verified that the edit/delete options no longer appeared on either the blogs or blog_details pages. 
     ![](media/blog-testing.png)
     
+## Browsers
+This site was tested on, and is confirmed to function and appear correctly on, the following browsers: Chrome (v91), Safari (v14.0) and Firefox (86.0.1/64-bit), as well as a variety of mobile devices using Google Chrome's Developer tools. 
 
-
+- Resolved issue: the index page's carousel and the footer were missing relevant CSS styling on the Safari browser. This was resolved by using a media query (found in this [stack overflow post](https://stackoverflow.com/questions/16348489/is-there-a-css-hack-for-safari-only-not-chrome/25975282#25975282) ) which specifically targets Safari only. 
 
 ## Automatic Testing
 
