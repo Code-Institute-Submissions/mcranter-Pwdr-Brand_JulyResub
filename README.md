@@ -432,5 +432,5 @@ Read more about the the S3 Bucket storage [here](https://aws.amazon.com/s3/). Fo
 - The articles on the blog page were taken from the site [Healthline](https://www.healthline.com/).
 
 ### Acknowledgements
-- My mentor, Precious Ijege, tutor support at the Code Institute, who offered invaluable assistance at various points and also [Huel](huel.com), which provided the inspiration for this particular type of ecommerce site.
+- My mentor, Precious Ijege, tutor support at the Code Institute, who offered invaluable assistance at various points and also [Huel](https://huel.com), which provided the inspiration for this particular type of ecommerce site.
 
